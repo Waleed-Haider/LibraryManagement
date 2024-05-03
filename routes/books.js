@@ -132,7 +132,7 @@ async function renderFromPage(res, book, form, hasError = false) {
     if (hasError)
       params.errorMessage = `Error ${
         form == "new" ? "Creating" : "Updating"
-      } Book.`;
+      } Book`;
     res.render(`books/${form}`, params);
   } catch (error) {
     res.redirect("/books");
